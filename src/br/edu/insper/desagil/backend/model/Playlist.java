@@ -17,29 +17,29 @@ public class Playlist {
 	}
 	
 	public int getId() {
-		return id;
+		return this.id;
 	}
 	public List<Track> getTracks() {
-		return tracks;
+		return this.tracks;
 	}
 	public Map<String, Integer> getRatings() {
-		return ratings;
+		return this.ratings;
 	}
 
 	public void addTrack(Track track) {
-		tracks.add(track);
+		this.tracks.add(track);
 	}
 	
 	public void putRating(String user, int rating) {
-		ratings.put(user, rating);
+		this.ratings.put(user, rating);
 	}
 	
 	public double averageRatings() {
 		int sum = 0;
-		for (int rating : ratings.values()) {
+		for (int rating : this.ratings.values()) {
 			sum += rating;
 		}
-		double average = (double) sum/ratings.size();
+		double average = (double) sum/this.ratings.size();
 		int i = (int) average;
 		double d = average - i;
 		if (d < 0.26) {

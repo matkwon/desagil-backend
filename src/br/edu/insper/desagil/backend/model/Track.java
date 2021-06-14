@@ -12,18 +12,18 @@ public class Track {
 	}
 
 	public Artist getArtist() {
-		return artist;
+		return this.artist;
 	}
 	public String getName() {
-		return name;
+		return this.name;
 	}
 	public int getDuration() {
-		return duration;
+		return this.duration;
 	}
 	
 	public String getDurationString() {
-		int min = duration/60;
-		int sec = duration - (min)*60;
+		int min = this.duration/60;
+		int sec = this.duration - (min)*60;
 		if (sec < 10) {
 			return Integer.toString(min) + ":0" + Integer.toString(sec);
 		}
@@ -31,7 +31,7 @@ public class Track {
 	}
 	
 	public String getFullArtistName() {
-		return artist.getName();
+		return this.artist.getName();
 	}
 
 }

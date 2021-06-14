@@ -14,7 +14,7 @@ public class CollaborationTrack extends Track {
 	@Override
 	public String getFullArtistName() {
 		List<String> names = new ArrayList<>();
-		for (Artist collaborator : collaborators) {
+		for (Artist collaborator : this.collaborators) {
 			names.add(collaborator.getName());
 		}
 		String features = String.join(", ", names);
